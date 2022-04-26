@@ -1,0 +1,10 @@
+{
+    "secret": "secret",
+
+    "database": {
+        "host": "localhost",
+        "user": "Admin",
+        "password": "egoz2007",
+        "database": "ImPaste"
+    }
+}

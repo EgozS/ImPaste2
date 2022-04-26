@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="../css/index.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <h1>Welcome to ...</h1>
+            </div>
+            <div class="content">
+                <h3>wLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Diam sollicitudin tempor id eu nisl nunc. Amet commodo nulla facilisi nullam vehicula ipsum.</h3>
+                <form action="/upload" method="post" enctype="multipart/form-data">
+                    <input type="file" id="files" style="visibility: hidden;" name = "pic" accept="image/*">
+                    <br>
+                    <label for="files" id="files" class = "lbl">Select file</label>
+                    <br>
+                    <br>
+                    <input type="submit" value="Upload" name="submit" id = "submit">
+                </form>
+            </div>
+            <div class="footer">
+                <a href="/login">login / register</a>
+            </div>
+        </div>
+        <script>
+            var img = document.getElementById("files");
+            img.addEventListener("change", handleFiles, false);
+            function handleFiles() {
+                var label = document.getElementsByClassName("lbl");
+                var fileList = this.files;
+                console.log(fileList);
+                label[0].innerHTML = fileList[0].name;
+                
+            }
+
+        </script>
+</html>
